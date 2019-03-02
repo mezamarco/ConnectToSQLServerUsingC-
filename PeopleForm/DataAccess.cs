@@ -23,7 +23,7 @@ namespace PeopleForm
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("SampleDB")))
             {
-                //
+                //HI
                 List<Customer> people = new List<Customer>();
                 people.Add(new Customer { FirstName = first, LastName = last, Email = email, Phone = phone, City = city, State = state, Zip = zip });
                 connection.Execute("dbo.Customer_Insert @FirstName, @LastName, @Email, @Phone, @City, @State, @Zip", people);
